@@ -41,7 +41,7 @@
               v-bind="attrs"
               v-on="on"
             >
-              New Item
+              New User
             </v-btn>
           </template>
           <v-card>
@@ -72,16 +72,7 @@
                       label="Last Name"
                     ></v-text-field>
                   </v-col>
-                  <v-col
-                    cols="12"
-                    sm="6"
-                    md="4"
-                  >
-                    <v-text-field
-                      v-model="editedItem.fat"
-                      label="Fat (g)"
-                    ></v-text-field>
-                  </v-col>
+          
                   <v-col
                     cols="12"
                     sm="6"
@@ -186,23 +177,21 @@
       editedIndex: -1,
       editedItem: {
         fname: '',
-        lname: 0,
-        fat: 0,
-        role: 0,
-        reset: 0,
+        lname: '',
+        role: '',
+        reset: '',
       },
       defaultItem: {
         name: '',
-        lname: 0,
-        fat: 0,
-        role: 0,
-        reset: 0,
+        lname: '',
+        role: '',
+        reset: '',
       },
     }),
 
     computed: {
       formTitle () {
-        return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+        return this.editedIndex === -1 ? 'New User' : 'Edit User'
       },
     },
 
@@ -226,7 +215,6 @@
             fname: 'Frozen',
             lname:'Yogurt',
             calories: 159,
-            fat: 6.0,
             role: ['A','B'],
             reset: '',
           },
@@ -234,7 +222,6 @@
             fname: 'Ice cream',
             lname:'sandwich',
             calories: 237,
-            fat: 9.0,
             role: ['A','B'],
             reset: '',
           },
@@ -242,7 +229,6 @@
             fname: 'Ech',
             lname: 'clair',
             calories: 262,
-            fat: 16.0,
             role: ['A','B'],
             reset: '',
           },
@@ -250,7 +236,6 @@
             fname: 'Cup',
             lname: 'cake',
             calories: 305,
-            fat: 3.7,
             role: ['A','B'],
             reset: '',
           },
@@ -258,7 +243,6 @@
             fname: 'Ginger',
             lname: 'bread',
             calories: 356,
-            fat: 16.0,
             role: ['A','B'],
             reset: '',
           },
@@ -266,7 +250,6 @@
             fname: 'Jelly',
             lname: 'bean',
             calories: 375,
-            fat: 0.0,
             role: ['A','B'],
             reset: '',
           },
@@ -274,7 +257,6 @@
             fname: 'Lolli',
             lname: 'pop',
             calories: 392,
-            fat: 0.2,
             role: ['A','B'],
             reset: '',
           },
@@ -282,7 +264,6 @@
             fname: 'Honey',
             lname: 'comb',
             calories: 408,
-            fat: 3.2,
             role: ['A','B'],
             reset: '',
           },
@@ -290,7 +271,6 @@
             fname: 'Doh',
             lname: 'nut',
             calories: 452,
-            fat: 25.0,
             role: ['A','B'],
             reset: '',
           },
@@ -298,7 +278,6 @@
             fname: 'Kit',
             lname: 'kat',
             calories: 518,
-            fat: 26.0,
             role: ['A','B'],
             reset: '',
           },
